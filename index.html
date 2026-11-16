@@ -89,6 +89,12 @@ dialog h3{margin:0 0 12px;font-size:1.5rem}
 <script src="config.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.75.0/dist/umd/supabase.js"></script>
 <script>
+  window.si = window.si || function () { 
+    (window.siq = window.siq || []).push(arguments); 
+  };
+</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+<script>
 const sb=supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const cats=[["shawarmas","Shawarmas","Wrapped hot, sauce and all."],["sandwiches","Sandwiches","Toasted and pressed."],["rolls","Rolls","Easy to hold, hard to put down."],["sides","Sides","Crispy things to share."]];
